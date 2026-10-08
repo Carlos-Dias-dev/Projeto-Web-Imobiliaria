@@ -1,0 +1,16 @@
+<%- include('./partials/header') %>
+
+<h2>Catálogo de Itens</h2>
+<p>Selecione um item para ver seus detalhes:</p>
+
+<div class="card-grid">
+  <% itens.forEach(item => { %>
+    <div class="card">
+      <h3><%= item.nome %></h3>
+      <p><strong><%= item.preco %></strong></p>
+      <a href="/detalhes/<%= item.id %>" class="btn">Ver Detalhes</a>
+    </div>
+  <% }) %>
+</div>
+
+<!-- <%- include('./partials/footer') %> -->
